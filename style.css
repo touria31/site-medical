@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    position: relative;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/* Header */
+header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    margin-right: 50px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+ul {
+    display: flex;
+    gap: 20px;
+}
+ul li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: #317a8b;
+}
+
+#connexion,
+#deco {
+    color: white;
+    font-size: 1.2rem;
+    background: #ffa500;
+    padding: 10px;
+    border-radius: 22px;
+}
+/* Logout section */
+.deconnexion {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+
+#deco {
+    text-align: center;
+    text-decoration: none;
+}
+nav a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#connexion:hover {
+    cursor: pointer;
+    color: #f6be78;
+    background: white;
+    border: 1px solid #f6be78;
+    text-decoration: none;
+
+}
+/* Main content of index page */
+main {
+    margin-top: 80px;
+}
+.experience {
+    background: url(images/img1.png) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: calc(100vh - 76px);
+    position: relative;
+}
+
+.text1 {
+    width: 40%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-40%, -50%);
+}
+button {
+    background: orange;
+    padding: 10px 15px;
+    ;
+    border: none;
+    border-radius: 20px;
+    color: white;
+}
+.about-us {
+    background: url(images/img3.jpg) no-repeat;
+    background-size: 40% 100%;
+    background-position: 60px center;
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+.text2 {
+    width: 40%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-0%, -50%);
+}
+
+.service {
+    width: 60%;
+    height: 300px;
+    padding: 50px;
+}
+.card-footer {
+    width: 200px;
+    color: #317a8b;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 0px 0px #0000003b;
+
+}
+.bas-de-page {
+    display: flex;
+    justify-content: space-around;
+    background: aliceblue;
+    padding: 40px;
+}
+/*  Footer section / footer page */
+footer {
+    background-color: #317a8b;
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+    width: 100vw;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #f6be78;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 0.8rem;
+}
+/* Login page STYLES */
+.container {
+    background: url(images/img2.png) no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.formulaire {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin: 77px;
+}
+#button {
+    background: #317a8b;
+    color: white;
+    width: 20%;
+    margin-top: 10px;
+}
+
+#button:hover {
+    background-color: white;
+    border: 1px solid #317a8b;
+    color: #317a8b;
+    cursor: pointer;
+}
+#username,
+#password,
+#button {
+    width: 25%;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+/* Appointement (RDV) page styles */
+.rdv-formulaire {
+    margin-top: 100px;
+}
+
+.rdv-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+form input[type="submit"] {
+    margin-top: 20px;
+    background-color: #317a8b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #245f70;
+}
+
+#menu {
+    display: none;
+}
+
+@media (max-width:600px) {
+   
+    .experience {
+        background-size: 100% 100%;
+    }
+
+    .about-us {
+        background-size: 90% 100%;
+        background-position: 25px center;
+    }
+    .text2 {
+        width: 60%;
+        left: 0;
+        top: 38%;
+    }
+    .service {
+        padding: 30px;
+    }
+    .bas-de-page {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .card-footer {
+        width: 90%;
+    }
+    .formulaire {
+        width: 100%;
+        margin: 77px auto;
+    }
+    #username,
+    #password,
+    #button {
+        width: 90%;
+        
+    }
+   
+    .menu:before {
+        content: '\2630';
+        cursor: pointer;
+        font-size: 40px;
+        color: #317a8b;
+    }
+
+    #menu:checked ~ .menu:before {
+        content: '\2715';
+        cursor: pointer;
+        font-size: 40px;
+        color: #317a8b;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    #menu:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        padding: 20px;
+        margin: 0 auto;
+        background-color: white;
+        text-align: center;
+    }
+}
