@@ -15,8 +15,10 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date']) && 
     $prenom =  $_POST['prenom'];
     $date =  $_POST['date'];
     $heure =  $_POST['heure'];
+    $service =  $_POST['service'];
+
      // Create a message indicating the appointment details
-    $messageRdv = "$nom $prenom vous avez rendez vous à $heure le $date";
+    $messageRdv = "$nom $prenom vous avez rendez vous à $heure le $date avec $service";
      // Set the form visibility to false since the appointment is set
     $formulaireVisible = false;
 
@@ -65,9 +67,9 @@ if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['date']) && 
         <label for="service">Médecin / Service :</label>
         <select name="service" id="service" >
             <option value="">-- Choisir --</option>
-            <option value="generaliste">Médecin généraliste</option>
-            <option value="pediatrie">Pédiatrie</option>
-            <option value="dermatologie">Dermatologie</option>
+            <option value="Generaliste">Médecin généraliste</option>
+            <option value="Pediatre">Pédiatrie</option>
+            <option value="Dermatologue">Dermatologie</option>
             <option value="autre">Autre</option>
         </select>
         <input type="submit" value="Envoyer la demande">
